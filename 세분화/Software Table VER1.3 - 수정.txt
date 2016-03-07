@@ -1,0 +1,161 @@
+1. Level of Concern (Bold, 12 font)						
+	2. Software Description 					
+		2.1 Programming language (Bold, 10 font)				
+			ANSI C/C++			
+		2.2 Hardware platform				
+			x86			
+		2.3 operating system (if applicable)				
+			Window XP			
+		2.4 use of Off-the Shelf software (if applicable)				
+			Window			
+	3. RISK MANAGEMENT 					
+		Appendix 6 참조 				
+	4. Software Requirements Specification(SRS)					
+		4.1 Hardware Requirements				
+			4.1.1 Microprocessors			
+				4.1.1.1 Initialization (SRS-M01)		
+				4.1.1.2 Probe Setting (SRS-M02)		
+				4.1.1.3 System option setting (SRS-M03)		
+			4.1.2 Memory devices			
+				4.1.2.1 Patient Information (SRS-D01)		
+				4.1.2.2 Save Cline Loop (SRS-D02)		
+				4.1.2.3 Save Image (SRS-D03)		
+			4.1.3 Sensors			
+				4.1.3.1 Probe ID Selection (SRS-S01)	
+				4.1.3.2	Linear Probe Selection (SRS-S02, ★)
+				4.1.3.3	Convex Probe Selection (SRS-S03, ★)
+				4.1.3.4	Phased Probe Selection (SRS-S04, ★)
+				4.1.3.5	Sector Probe Selection (SRS-S05, ★)
+				4.1.3.6	Vaginal Probe Selection (SRS-S06, ★)	
+			4.1.4 Energy sources			
+				4.1.4.1 Tx (SRS-E01)		
+				4.1.4.2 Rx (SRS-E02)		
+				4.1.4.3 Range gate (SRS-E03, ★)
+				4.1.4.4 Focus Delay (SRS-E04, ★) 
+				4.1.4.4 Channel Acq (SRS-E05)		
+				4.1.4.5 Frequency (SRS-E06)
+				
+			4.1.5 Safety features			
+				4.1.4.1 MI (SRS-S01)		
+				4.1.5.2 TI (SRS-S02)		
+			4.1.6 Communications			
+				4.1.6.1 Power On/Off (SRS-C01)		
+				4.1.6.2 Freeze (SRS-C02)		
+				4.1.6.3 Vertical (SRS-C03)		
+				4.1.6.4 Horizontal (SRS-C04)		
+				4.1.6.5 Dynamic Range (SRS-C05)		
+				4.1.6.6 Patient Input (SRS-C06)		
+				4.1.6.7 Focus# (SRS-C07)		
+				4.1.6.8 Zoom (SRS-C08)		
+				4.1.6.9 Mode Selection (B mode, M mode, CMF mode, PDI mode) (SRS-C09)		
+			4.1.7 External equipment			
+				4.1.7.1 DICOM (SRS-X01)		
+				4.1.7.2 External Printer (SRS-X02)		
+			4.1.8 Imaging Processing and Motion (H/W) 			
+				4.1.8.1 Demodulator (SRS-PH01)		
+				4.1.8.2 Clutter Filter & Hilbert (SRS-PH02)		
+				4.1.8.3 ADC (SRS-PH03)		
+		4.2 Programming Language Requirements				
+			4.2.1 Program Language			
+				4.2.1.1 Main UI & sequence	(SRS-PP01☆)	
+				4.2.1.2 Firmware		(SRS-PP02☆)
+			4.2.2 Programming Tools and Library			 (SRS-PP03☆)
+				4.2.2.1 Editor: Microsoft Visual 2010 		
+				4.2.2.2 C++ compiler: Microsoft Visual 2010		
+			4.2.3 Program Size: 170M			(SRS-PP04☆)
+		4.3 Interface Requirements				
+			4.3.1 Printers (SRS-I01)			
+			4.3.2 Monitors (SRS-I02)			
+			4.3.3 Keyboard (SRS-I03)			
+			4.3.4 Mouse (SRS-I04)			
+			4.3.5 Functions for checking DB size & compaction DB (SRS-I05)			
+			4.3.6 USB (SRS-I06)	
+			4.3.7 LAN (SRS-I07 ★)
+			4.3.8 VGA (SRS-I08 ★)
+			4.3.9 CP (Control Panel) (SRS-I09 ★)
+			4.3.10 TGC (SRS-I10 ★)
+		4.4 Software Performance and Functional Requirements				
+			4.4.1 Device limitations due to software	(SRS-SP01☆)		
+			4.4.2 Internal software tests and checks: Software checks the status of USB connection.		 (SRS-SP02☆)	
+			4.4.3 Error and interrupt handling: Software handles no interrupt and internal timer interrupt.		(SRS-SP03☆)	
+			4.4.4 Fault detection, tolerance, and recovery characteristics			
+			Software detects the status of USB connection, and do re-connect if connection is lost.			
+			Software checks the validity of image and discards it if not valid.		(SRS-SP04☆)	
+			4.4.5 Safety requirements			(SRS-SP05☆)	
+			4.4.6 Timing and memory requirements			
+				4.4.6.1 Memory Storage (SRS-MS01)
+				4.4.6.2 시스템 부팅 시간 (SRS-MS02 ★)
+				4.4.6.3 Probe 인식 시간 (SRS-MS03 ★)
+				4.4.6.4 Probe 선택 시간	(SRS-MS04 ★)
+				4.4.6.5 Pint 출력 시간	(SRS-MS05 ★)
+			4.4.7 Identification of off-the-shelf software, if appropriate.			
+			4.4.8 Imaging Processing and Motion (S/W)			
+				4.4.8.1 DAS (SRS-PS01)		
+				4.4.8.2 Envelop Detection (SRS-PS02)		
+				4.4.8.3 Log Compression (SRS-PS03)		
+				4.4.8.4 Distal Scan Conversion (SRS-PS04)
+				4.4.8.5 Base Line (SRS-PS05 ★)
+				4.4.8.6 Body Mark (SRS-PS06 ★)
+	5. Architecture Design Chart					
+		5.1	Software Diagram and Description			
+		5.2 Main Module				
+		5.3 Database Module				
+		5.4 Scan process Module				
+		5.5	scan operation flow (After RF Data Acquisition)			
+		5.6 Pre-amp operation flow				
+		5.7 Firmware Module				
+			5.7.1 Tx flow (PW, Pulse Wave)			
+			5.7.2 Tx flow (CW, Continue Wave)			
+			5.7.3 Rx flow			
+	6. Software Design Specification(SDS)					
+		SRS와 매칭하여 작성				
+		6.1 TGC				
+		6.2 Envelop Detection				
+		6.3 Dynamic Range				
+		6.4 Digital Scan Conversion				
+		6.5 Demodulation				
+		6.6 Excitation signal
+		6.7 Tx
+		6.8 Rx
+		6.9 Delay Calc
+	7. Traceability 					
+		목차 순서: Potential hazard -> Design requirements(SRS) -> design specifications(SDS) -> Test / Objective 				
+	8. Software development Environment Description					
+		8.1 Development Life Cycle				
+			8.1.1 Development Life Cycle Procedure			
+			8.1.2 Description of Development Life Cycle			
+		8.2 Software Maintenance Life Cycle				
+			8.2.1 Software Maintenance Life Cycle Procedure			
+			8.2.2 Description of Software Maintenance Life Cycle Procedure			
+		8.3 Software Configuration Management Life Cycle				
+			8.3.1 Software Configuration Management Life Cycle Procedure			
+			8.3.2 Description of Software Configuration Management			
+	9. Verification and Validation Documentation -> Verification, Validation & Test Plan					
+		9.1 Abbreviations and Symbols				
+		9.2 Definitions				
+		9.3 Reference				
+			9.3.1 Regulatory Standards & Guidances			
+			9.3.2 Industry Standards and Guidances			
+			9.3.3 Internal Standards & Guidances			
+		9.4 Roles and Responsibilities				
+			9.4.1 Management Members			
+			9.4.2 Hazard Analysis Team : Members, Roles and Responsibilities			
+			9.4.3 V & V Testing Team : Members, Roles and Responsibilities			
+			9.4.4 Documentation Review : Members, Roles and Responsibilities			
+			9.4.5 Team Members/Qualifications			
+		9.5 V.V & T Item & Methods				
+			9.4.1 Static Analysis			
+			9.5.2 Dynamic Analysis			
+		9.6 Documentation Handling				
+	10. Revision Level History	
+		10.1 RL-01
+		10.2 RL-02
+	11. Unsolved Bugs					
+	12. Release Version Number					
+	13. IEC 62304 Checklist					
+	14. 부록					
+		Appendix 1. S/W Verification Report : Code Review 				
+		Appendix 2. S/W Verification Report : Module Review				
+		Appendix 3. S/W Verification Report : Integration Review 				
+		Appendix 4. Dynamic Test Protocol				
+		Appendix 5. Dynamic Test				

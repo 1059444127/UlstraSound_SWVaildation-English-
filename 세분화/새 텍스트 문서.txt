@@ -1,0 +1,8 @@
+1. Software Validation Plan
+2. Software requirements analysis
+3. Software architectural design
+4. Software detailed design
+5. Softare UNIT implementation and verification
+6. Software integration and integration testing
+7. SOFTWARE SYSTEM testing
+8. Software release
